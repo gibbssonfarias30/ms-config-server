@@ -31,12 +31,12 @@ spring:
         client:
           enabled: true
           
-  zipkin:
-    enabled: true
-    sender:
-      type: kafka
-    kafka:
-      topic: zipkin
+  # zipkin:
+  #   enabled: true
+  #   sender:
+  #     type: kafka
+  #   kafka:
+  #     topic: zipkin
 
 management:
   endpoints:
@@ -46,6 +46,14 @@ management:
   endpoint:
     health:
       show-details: always
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0
+
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
 
 eureka:
   client:
