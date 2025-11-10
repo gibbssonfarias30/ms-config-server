@@ -79,9 +79,3 @@ resilience4j:
     instances:
       product:
         base-config: product
-
-configuration:
-    texto: Configurando entorno Desarrollo ...
-    autor:
-        nombre: John Doe
-        email: johndoe@email.com
